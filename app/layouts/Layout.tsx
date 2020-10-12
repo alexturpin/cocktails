@@ -11,7 +11,6 @@ const Layout = ({ title, children }: LayoutProps) => {
     <>
       <Head>
         <title>{title || "cocktails"}</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       {children}
