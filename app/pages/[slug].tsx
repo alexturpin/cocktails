@@ -11,7 +11,7 @@ export const getStaticPaths = () => {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const post = getPostBySlug(params.slug, ["title", "content"])
+  const post = getPostBySlug(params.slug, ["title", "content", "image"])
   const content = await markdownToHtml(post.content || "")
 
   return {
@@ -29,6 +29,7 @@ const Cocktail = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
     <div>
       <h1>{post.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
+      <img src={post.image} alt={post.title} />
     </div>
   )
 }

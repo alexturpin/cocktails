@@ -1,5 +1,6 @@
 ---
 title: Méchant Bon Bloody
+image: /assets/bloody.jpg
 ---
 
-Haha
+Lorem ipsum dolor sit amet

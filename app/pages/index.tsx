@@ -20,7 +20,7 @@ const Home = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
           {posts.map((post) => {
             return (
               <li key={post.slug}>
-                <Link href="/cocktails/[slug]" as={`/cocktails/${post.slug}`}>
+                <Link href="/[slug]" as={`/${post.slug}`}>
                   {post.title}
                 </Link>
               </li>
