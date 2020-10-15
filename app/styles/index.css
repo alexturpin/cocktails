@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 h3 {
-  @apply text-2xl py-3;
+  @apply text-2xl py-3 font-semibold;
 }
 
 ul {
@@ -12,4 +12,18 @@ ul {
 
 ol {
   @apply list-decimal list-inside;
+}
+
+p,
+ul,
+ol {
+  @apply mb-4;
+}
+
+a {
+  @apply underline;
+}
+
+a:hover {
+  @apply no-underline;
 }
