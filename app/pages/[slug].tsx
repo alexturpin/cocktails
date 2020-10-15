@@ -1,5 +1,5 @@
 import markdownToHtml, { getAllPosts, getPostBySlug } from "app/cocktails"
-import { InferGetStaticPropsType } from "blitz"
+import { Link, InferGetStaticPropsType } from "blitz"
 
 export const getStaticPaths = () => {
   return {
@@ -30,6 +30,9 @@ const Cocktail = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
       <h1 className="text-4xl p-4 pb-0 font-bold">{post.title}</h1>
       <img className="max-w-s float-left p-4" src={post.image} alt={post.title} />
       <div className="p-4" dangerouslySetInnerHTML={{ __html: post.content }}></div>
+      <Link href="/">
+        <a className="p-4">Retour à la liste de cocktails</a>
+      </Link>
     </div>
   )
 }
