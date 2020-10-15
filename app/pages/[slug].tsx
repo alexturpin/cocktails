@@ -26,10 +26,10 @@ export const getStaticProps = async ({ params }) => {
 
 const Cocktail = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <div>
-      <h1>{post.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
-      <img src={post.image} alt={post.title} />
+    <div className="container mx-auto">
+      <h1 className="text-4xl p-4">{post.title}</h1>
+      <img className="max-w-s float-left p-4" src={post.image} alt={post.title} />
+      <div className="p-4" dangerouslySetInnerHTML={{ __html: post.content }}></div>
     </div>
   )
 }
